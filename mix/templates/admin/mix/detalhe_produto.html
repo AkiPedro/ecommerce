@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ produto.nome }}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <!-- Barra de Navegação -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">E-commerce</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Produtos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Detalhes do Produto -->
+    <div class="container mt-5">
+        <h1>{{ produto.nome }}</h1>
+        <img src="{{ produto.imagem.url }}" class="img-fluid" alt="{{ produto.nome }}">
+        <p>{{ produto.detalhes }}</p>
+        <a href="{% url 'home' %}" class="btn btn-primary">Voltar para a Home</a>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="bg-light text-center py-4 mt-5">
+        <p>&copy; 2025 E-commerce</p>
+    </footer>
+</body>
+</html>
